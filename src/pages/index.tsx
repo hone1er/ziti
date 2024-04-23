@@ -302,82 +302,75 @@ export default function Home() {
 
             <section
               id="work"
-              className="px-none z-10 flex min-h-screen w-full flex-col justify-between bg-[#EDE5D9] py-20"
+              className="px-none z-10 flex min-h-screen w-full flex-col justify-between bg-[#EDE5D9] py-10 pb-2 md:py-20"
             >
               <Marquee />
 
-              <div className="flex flex-col items-center gap-4 px-4">
+              <div className="flex flex-col items-center gap-4 px-2 sm:px-4">
                 {/* various images placed in a grid with 2 columns. The first column has two rows and the second has 3. use a placeholder image for now  */}
-                <div className="my-40 mt-20 grid grid-cols-2 gap-12">
-                  <div className="flex flex-col items-center gap-12">
-                    <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-4 border-black text-center">
-                      <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-4 border-black text-center">
-                        <div className="relative left-10 m-auto h-[372px] max-h-full w-[480px] max-w-full">
-                          {" "}
-                          <AspectRatio
-                            ratio={10 / 7.25}
-                            className="relative h-full w-full "
-                          >
-                            <Image
-                              src="/images/twaliLaptop.png"
-                              fill
-                              alt="twali laptop"
-                            />
-                          </AspectRatio>
-                        </div>
+                <div className="my-40 mt-20 grid grid-cols-2 gap-2 md:gap-12">
+                  <div className="flex flex-col items-center gap-2 md:gap-12">
+                    <div className="relative h-auto max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] p-[6px] text-center sm:p-2 lg:p-8 xl:h-[425px]">
+                      {" "}
+                      <div className="border-4 border-black p-8">
+                        <AspectRatio
+                          ratio={10 / 7.25}
+                          className="relative h-full w-full "
+                        >
+                          <Image
+                            src="/images/twaliLaptop.png"
+                            fill
+                            alt="twali laptop"
+                          />
+                        </AspectRatio>
                       </div>
                     </div>
-                    <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-4 border-black text-center">
-                      <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-4 border-black text-center">
-                        <div className="relative left-10 m-auto h-[372px] max-h-full w-[480px] max-w-full">
-                          {" "}
-                          <AspectRatio
-                            ratio={10 / 7.25}
-                            className="relative h-full w-full "
-                          >
-                            <Image
-                              src="/images/twaliLaptop.png"
-                              fill
-                              alt="twali laptop"
-                            />
-                          </AspectRatio>
-                        </div>
+
+                    <div className="relative h-auto max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] p-[6px] text-center sm:p-2 lg:p-8 xl:h-[425px]">
+                      {" "}
+                      <div className="border-4 border-black p-8">
+                        <AspectRatio
+                          ratio={10 / 7.25}
+                          className="relative h-full w-full "
+                        >
+                          <Image
+                            src="/images/twaliLaptop.png"
+                            fill
+                            alt="twali laptop"
+                          />
+                        </AspectRatio>
                       </div>
                     </div>
                   </div>
-                  <div className="flex flex-col items-center gap-12">
-                    <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-4 border-black text-center">
-                      <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-4 border-black text-center">
-                        <div className="relative left-10 m-auto h-[372px] max-h-full w-[480px] max-w-full">
-                          {" "}
-                          <AspectRatio
-                            ratio={10 / 7.25}
-                            className="relative h-full w-full "
-                          >
-                            <Image
-                              src="/images/twaliLaptop.png"
-                              fill
-                              alt="twali laptop"
-                            />
-                          </AspectRatio>
-                        </div>
+                  <div className="flex flex-col items-center gap-2 md:gap-12">
+                    <div className="relative h-auto max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] p-[6px] text-center sm:p-2 lg:p-8 xl:h-[425px]">
+                      {" "}
+                      <div className="border-4 border-black p-8">
+                        <AspectRatio
+                          ratio={10 / 7.25}
+                          className="relative h-full w-full "
+                        >
+                          <Image
+                            src="/images/twaliLaptop.png"
+                            fill
+                            alt="twali laptop"
+                          />
+                        </AspectRatio>
                       </div>
                     </div>
-                    <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-4 border-black text-center">
-                      <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-4 border-black text-center">
-                        <div className="relative left-10 m-auto h-[372px] max-h-full w-[480px] max-w-full">
-                          {" "}
-                          <AspectRatio
-                            ratio={10 / 7.25}
-                            className="relative h-full w-full "
-                          >
-                            <Image
-                              src="/images/twaliLaptop.png"
-                              fill
-                              alt="twali laptop"
-                            />
-                          </AspectRatio>
-                        </div>
+                    <div className="relative h-auto max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] p-[6px] text-center sm:p-2 lg:p-8 xl:h-[425px]">
+                      {" "}
+                      <div className="border-4 border-black p-8">
+                        <AspectRatio
+                          ratio={10 / 7.25}
+                          className="relative h-full w-full "
+                        >
+                          <Image
+                            src="/images/twaliLaptop.png"
+                            fill
+                            alt="twali laptop"
+                          />
+                        </AspectRatio>
                       </div>
                     </div>
                   </div>
