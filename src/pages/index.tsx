@@ -229,12 +229,12 @@ export default function Home() {
                         <p>brand architecture</p>
                       </PillWithText>
                       <PillWithText
-                        className={` absolute bottom-[-72px] right-[188px] z-20 text-[#EDE5D9]`}
+                        className={` absolute bottom-[-72px] right-[220px] z-20 text-[#EDE5D9]`}
                       >
                         <p>go-to-market</p>
                       </PillWithText>{" "}
                       <PillWithText
-                        className={` absolute bottom-[-72px] right-[-140px] text-[#EDE5D9]`}
+                        className={` absolute bottom-[-72px] right-[-96px] text-[#EDE5D9]`}
                       >
                         <p>research + strategy</p>
                       </PillWithText>
