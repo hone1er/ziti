@@ -13,7 +13,7 @@ const rocGrotesk = localFont({
 const nasalization = localFont({
   src: "../../public/fonts/nasalization-rg.otf",
 });
-export const spaceGroteskReg = rocGrotesk.style.fontFamily;
+
 export default function Home() {
   useEffect(() => {
     const handleSmoothScroll = (e: MouseEvent) => {
