@@ -113,7 +113,6 @@ export default function Home() {
                       </CardContent>
                     </Card>
                   </div>
-                  {/* rounded button with text above an image, a white background, and black 2px border */}
                   <a
                     href="#chat"
                     className="
