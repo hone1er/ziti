@@ -46,9 +46,9 @@ export default function Home() {
       </Head>
       <main className="flex min-h-[1400px] flex-col items-center justify-center bg-[#EDE5D9]">
         <div className="flex w-full flex-col items-center justify-center gap-12 px-0 pt-16 ">
-          <header className="align-center relative z-20 flex w-full justify-center">
+          <div className="align-center relative z-20 flex w-full justify-center">
             {/* add a thick black border */}
-            <nav className="auto border-t-l fixed top-0 z-50 mt-[40px] flex h-[90px] w-full max-w-[1348px] items-center justify-between rounded-full rounded-bl-none rounded-tl-none border-4 border-black bg-white px-4 md:px-12 ">
+            <nav className="auto border-t-l fixed top-0 z-50 mt-[40px] flex h-[90px] w-full max-w-[96%] items-center justify-between rounded-full rounded-bl-none rounded-tl-none border-4 border-black bg-white px-4 md:px-12 xl:max-w-[1348px] ">
               <div className="flex w-auto items-center gap-4 pr-4 sm:w-full">
                 <div className="flex w-20 max-w-[100px] flex-row justify-between sm:w-full md:max-w-[158px] ">
                   <div className="relative flex h-[42px] w-[48px] max-w-full sm:w-[95px]">
@@ -85,7 +85,7 @@ export default function Home() {
                 </a>
               </div>
             </nav>
-          </header>
+          </div>
 
           <section className="my-auto mt-8 min-h-[85vh] w-full max-w-[1348px] overflow-x-hidden bg-[#EDE5D9] px-2 sm:top-[140px] md:px-8 xl:sticky xl:px-0">
             <div className="flex flex-col items-center gap-4">
@@ -116,7 +116,8 @@ export default function Home() {
                     href="#chat"
                     className="
                     relative
-                   mx-auto flex h-[280px] max-h-full w-[280px] max-w-full flex-col items-center justify-center gap-4 rounded-full border-4 border-black bg-white sm:mx-0"
+                    mx-auto
+                   flex h-[280px] max-h-full w-[280px] max-w-full flex-col items-center justify-center gap-4 place-self-center rounded-full border-4 border-black bg-white sm:mx-0"
                   >
                     <h1
                       className={`${rocGrotesk.className} max text-[36px] font-light tracking-tight text-black`}
@@ -203,42 +204,42 @@ export default function Home() {
                   <BlockCard className="overflow-hidden rounded-b-none bg-[#E30B17]">
                     <div className="relative flex items-center gap-4">
                       <PillWithText
-                        className={` absolute left-80 top-[-38px] z-50 text-[#EDE5D9]`}
+                        className={` absolute left-80 top-[-38px] z-50 px-5 text-[#EDE5D9]`}
                       >
                         <p> integrated campaigns</p>
                       </PillWithText>
                       <PillWithText
-                        className={` absolute bottom-[-72px] left-[-12px] z-40 whitespace-nowrap text-[#EDE5D9]`}
+                        className={` absolute bottom-[-72px] left-[-12px] z-40 whitespace-nowrap px-5 text-[#EDE5D9]`}
                       >
                         <p>content production</p>
                       </PillWithText>
                       <PillWithText
-                        className={` absolute left-40 top-[-72px] z-40 text-[#EDE5D9]`}
+                        className={` absolute left-40 top-[-72px] z-40 px-5 text-[#EDE5D9]`}
                       >
                         <p>verbal identity</p>
                       </PillWithText>
                       <PillWithText
-                        className={` absolute bottom-[-44px] left-[164px] z-30 text-[#EDE5D9]`}
+                        className={` absolute bottom-[-44px] left-[164px] z-30 px-5 text-[#EDE5D9]`}
                       >
                         <p>digital experience</p>
                       </PillWithText>{" "}
                       <PillWithText
-                        className={` absolute bottom-[-14px] left-[-32px] z-20 text-[#EDE5D9]`}
+                        className={` absolute bottom-[-14px] left-[-32px] z-20 px-5 text-[#EDE5D9]`}
                       >
                         <p>brand architecture</p>
                       </PillWithText>
                       <PillWithText
-                        className={` absolute bottom-[-72px] right-[220px] z-20 text-[#EDE5D9]`}
+                        className={` absolute bottom-[-72px] right-[220px] z-20 px-5 text-[#EDE5D9]`}
                       >
                         <p>go-to-market</p>
                       </PillWithText>{" "}
                       <PillWithText
-                        className={` absolute bottom-[-72px] right-[-96px] text-[#EDE5D9]`}
+                        className={` absolute bottom-[-72px] right-[-96px] px-5 text-[#EDE5D9]`}
                       >
                         <p>research + strategy</p>
                       </PillWithText>
                       <PillWithText
-                        className={` absolute bottom-[-6px] right-[-36px] text-[#EDE5D9]`}
+                        className={` absolute bottom-[-6px] right-[-36px] px-5 text-[#EDE5D9]`}
                       >
                         <p>content production</p>
                       </PillWithText>
@@ -256,18 +257,18 @@ export default function Home() {
                   <BlockCard className="max-w-full overflow-hidden rounded-b-none bg-[#F48019]">
                     <div className="relative flex max-w-full flex-col gap-4 p-8">
                       <div className="flex w-full max-w-[75%] flex-row justify-between gap-4 place-self-start">
-                        <PillWithText className="border-[2px] text-[12px]">
+                        <PillWithText className="border-[2px] px-5 text-[12px]">
                           <p>scope creep</p>
                         </PillWithText>
-                        <PillWithText className="border-[2px] text-[12px]">
+                        <PillWithText className="border-[2px] px-5 text-[12px]">
                           <p>long timelines</p>
                         </PillWithText>
                       </div>
                       <div className="flex w-full max-w-[75%] flex-row justify-between gap-4 place-self-end">
-                        <PillWithText className="border-[2px] text-[12px]">
+                        <PillWithText className="border-[2px] px-5 text-[12px]">
                           <p>high cost</p>
                         </PillWithText>
-                        <PillWithText className="border-[2px] text-[12px]">
+                        <PillWithText className="border-[2px] px-5 text-[12px]">
                           <p>limited adaptability</p>
                         </PillWithText>
                       </div>
@@ -284,13 +285,14 @@ export default function Home() {
                   </BlockCard>
                   <BlockCard className="overflow-hidden rounded-b-none bg-[#467EBB]">
                     <div className="relative flex flex-row items-center justify-between gap-2 px-6">
-                      <PillWithText className="border-[2px] px-5 text-[13px] font-light md:px-8 md:text-[24px]">
+                      <PillWithText className="border-[3px] px-5 text-[13px] font-light sm:text-[20px] md:px-8 md:text-[24px]">
                         product
                       </PillWithText>
-                      <PillWithText className="border-[2px] px-5 text-[13px] font-light md:px-8 md:text-[24px]">
-                        design
+                      <PillWithText className="flex flex-row whitespace-nowrap border-[3px] px-5 text-[13px] font-light sm:text-[20px] md:px-8 md:text-[24px]">
+                        design{" "}
+                        <span className="hidden pl-1 sm:block"> + brand</span>
                       </PillWithText>
-                      <PillWithText className="border-[2px] px-5 text-[13px] font-light md:px-8 md:text-[24px]">
+                      <PillWithText className="border-[3px] px-5 text-[13px] font-light sm:text-[20px] md:px-8 md:text-[24px]">
                         engineering
                       </PillWithText>
                     </div>
@@ -306,12 +308,11 @@ export default function Home() {
               <Marquee />
 
               <div className="flex flex-col items-center gap-4 px-2 sm:px-4">
-                {/* various images placed in a grid with 2 columns. The first column has two rows and the second has 3. use a placeholder image for now  */}
-                <div className="my-40 mt-20 grid grid-cols-2 gap-2 md:gap-12">
-                  <div className="flex flex-col items-center gap-2 md:gap-12">
-                    <div className="relative h-auto max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] p-[6px] text-center sm:p-2 lg:p-8 xl:h-[425px]">
+                <div className="my-40 mt-20 grid grid-cols-2 gap-2 md:gap-4">
+                  <div className="flex flex-col items-center gap-2 md:gap-4">
+                    <div className="relative h-auto max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
                       {" "}
-                      <div className="border-4 border-black p-8">
+                      <div className="rounded-[48px] rounded-tl-none border-4 border-black p-8">
                         <AspectRatio
                           ratio={10 / 7.25}
                           className="relative h-full w-full "
@@ -325,9 +326,8 @@ export default function Home() {
                       </div>
                     </div>
 
-                    <div className="relative h-auto max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] p-[6px] text-center sm:p-2 lg:p-8 xl:h-[425px]">
-                      {" "}
-                      <div className="border-4 border-black p-8">
+                    <div className="relative h-auto max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
+                      <div className="rounded-[48px] rounded-tr-none border-4 border-black p-8">
                         <AspectRatio
                           ratio={10 / 7.25}
                           className="relative h-full w-full "
@@ -341,10 +341,10 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="flex flex-col items-center gap-2 md:gap-12">
-                    <div className="relative h-auto max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] p-[6px] text-center sm:p-2 lg:p-8 xl:h-[425px]">
+                  <div className="flex flex-col items-center gap-2 md:gap-4">
+                    <div className="relative h-auto max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
                       {" "}
-                      <div className="border-4 border-black p-8">
+                      <div className="rounded-[48px] rounded-bl-none border-4 border-black p-8">
                         <AspectRatio
                           ratio={10 / 7.25}
                           className="relative h-full w-full "
@@ -357,9 +357,9 @@ export default function Home() {
                         </AspectRatio>
                       </div>
                     </div>
-                    <div className="relative h-auto max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] p-[6px] text-center sm:p-2 lg:p-8 xl:h-[425px]">
+                    <div className="relative h-auto max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
                       {" "}
-                      <div className="border-4 border-black p-8">
+                      <div className="rounded-[48px] rounded-br-none border-4 border-black p-8">
                         <AspectRatio
                           ratio={10 / 7.25}
                           className="relative h-full w-full "
@@ -526,7 +526,7 @@ interface PillWithTextProps {
 function PillWithText({ className, children }: PillWithTextProps) {
   return (
     <div
-      className={`h-[53px] content-center items-center whitespace-nowrap rounded-full border-4 border-black bg-[#EDE5D9] px-8 text-center text-[24px] tracking-tighter text-black ${nasalization.className} ${className} w-fit`}
+      className={`h-[53px] content-center items-center whitespace-nowrap rounded-full border-4 border-black bg-[#EDE5D9] text-center tracking-tighter text-black md:px-8 ${className} md:text-[24px] ${nasalization.className}  w-fit `}
     >
       {children}
     </div>
@@ -538,7 +538,7 @@ function Marquee() {
     <div
       className={`relative flex overflow-x-hidden ${nasalization.className}`}
     >
-      <div className="animate-marquee flex flex-row items-center whitespace-nowrap py-1">
+      <div className="flex animate-marquee flex-row items-center whitespace-nowrap py-1">
         <span className="mx-8 text-4xl">OUR WORK</span>
         <svg className="h-6 w-6" viewBox="0 0 24 24">
           <circle cx="12" cy="12" r="12" fill="#F90515" />
