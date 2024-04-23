@@ -88,17 +88,64 @@ export default function Home() {
             </nav>
           </header>
 
-          <section className="sticky top-[25vh] my-auto min-h-[85vh] w-full overflow-x-hidden bg-[#EDE5D9]">
+          <section className="sticky top-[25vh] my-auto min-h-[85vh] w-full max-w-[1348px] overflow-x-hidden bg-[#EDE5D9]">
             <div className="flex flex-col items-center gap-4">
-              <div className="relative min-h-[70vh] w-full max-w-[144] rounded-full bg-[#EDE5D9]">
-                <AspectRatio ratio={12 / 5}>
-                  <Image
-                    fill
-                    sizes="100vw"
-                    src={"/svg/zitiHeroLogo.svg"}
-                    alt="scan"
-                  />
-                </AspectRatio>
+              <div className="flex w-full flex-row justify-between">
+                <div className="relative min-h-[70vh]  rounded-full bg-[#EDE5D9]">
+                  <Card className=" h-[180px] max-h-full w-[600px] max-w-full content-center items-center rounded-[48px] border-2 border-black bg-[#F48019]">
+                    <CardContent className="p-0">
+                      <h1
+                        className={`${nasalization.className} text-center text-[36px]/normal font-bold tracking-normal text-[#EDE5D9] md:text-[56px]/normal`}
+                      >
+                        Product studio
+                      </h1>
+                    </CardContent>
+                  </Card>
+                  <Card className=" h-[200px] max-h-full w-[600px] max-w-full content-center items-center rounded-[48px] rounded-b-none border-2 border-black bg-[#805533]">
+                    <CardContent className="p-0">
+                      <h1
+                        className={`${nasalization.className} text-center text-[22px]/normal font-bold tracking-normal text-[#EDE5D9] md:text-[26px]/normal`}
+                      >
+                        Want to make your idea real but no idea where to start?
+                      </h1>
+                    </CardContent>
+                  </Card>
+                </div>
+                <div className="flex flex-col justify-start">
+                  <Card className="h-[400px] max-h-full w-[600px] max-w-full content-center content-center items-center rounded-[48px] rounded-r-none border-2 border-black bg-transparent">
+                    <CardContent className="relative left-8 mx-auto h-[300px] max-h-full w-[519px] max-w-full p-0">
+                      <Image
+                        src={"/images/iphone_mockup.png"}
+                        alt="iphone mockup"
+                        sizes={
+                          "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        }
+                        fill
+                      />
+                    </CardContent>
+                  </Card>
+                  <Card className=" h-[180px] max-h-full w-[600px] max-w-full content-center items-center rounded-[48px] rounded-bl-none rounded-tr-none border-2 border-black bg-[#467EBB]">
+                    <CardContent className="mx-auto flex max-w-[486px] flex-row items-center justify-between p-0">
+                      <Image
+                        width={42}
+                        height={42}
+                        src={"/svg/program.svg"}
+                        alt="help"
+                      />
+                      <h1
+                        className={`${rocGrotesk.className} text-center text-[20px]/normal font-bold tracking-normal text-[#EDE5D9] md:text-[24px]/normal`}
+                      >
+                        TO MVP AND BEYOND
+                      </h1>
+                      <Image
+                        width={42}
+                        height={42}
+                        src={"/svg/scan.svg"}
+                        alt="help"
+                      />
+                    </CardContent>
+                  </Card>
+                </div>
               </div>
             </div>
           </section>
