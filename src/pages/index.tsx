@@ -49,7 +49,7 @@ export default function Home() {
         <div className="flex w-full flex-col items-center justify-center gap-12 px-0 pt-16 ">
           <header className="align-center relative z-20 flex w-full justify-center">
             {/* add a thick black border */}
-            <nav className="auto border-t-l fixed top-0 z-10 mt-[40px] flex h-[90px] w-full max-w-[1348px] items-center justify-between rounded-full rounded-bl-none rounded-tl-none border-4 border-black bg-white px-4 md:px-12 ">
+            <nav className="auto border-t-l fixed top-0 z-50 mt-[40px] flex h-[90px] w-full max-w-[1348px] items-center justify-between rounded-full rounded-bl-none rounded-tl-none border-4 border-black bg-white px-4 md:px-12 ">
               <div className="flex w-auto items-center gap-4 pr-4 sm:w-full">
                 <div className="flex w-20 max-w-[100px] flex-row justify-between sm:w-full md:max-w-[158px] ">
                   <div className="relative flex h-[42px] w-[48px] max-w-full sm:w-[95px]">
@@ -93,7 +93,7 @@ export default function Home() {
               <div className="flex w-full flex-col-reverse items-center justify-between gap-8 xl:flex-row">
                 <div className="flex max-w-full flex-col justify-center gap-8 xl:min-h-[70vh]">
                   <div className="relative min-h-full rounded-full">
-                    <Card className=" h-[180px] max-h-full w-[600px] max-w-full content-center items-center rounded-[48px] border-2 border-black bg-[#F48019]">
+                    <Card className="relative z-10 h-[180px] max-h-full w-[600px] max-w-full content-center items-center rounded-[48px] border-4 border-black bg-[#F48019]">
                       <CardContent className="p-0">
                         <h1
                           className={`${nasalization.className} text-center text-[36px]/normal font-bold tracking-normal text-[#EDE5D9] md:text-[56px]/normal`}
@@ -102,7 +102,7 @@ export default function Home() {
                         </h1>
                       </CardContent>
                     </Card>
-                    <Card className=" h-[200px] max-h-full w-[600px] max-w-full content-center items-center rounded-[48px] rounded-b-none border-2 border-black bg-[#805533]">
+                    <Card className="relative bottom-1 z-10 h-[200px] max-h-full w-[600px] max-w-full content-center items-center rounded-[48px] rounded-b-none border-4 border-black bg-[#805533]">
                       <CardContent className="p-0">
                         <h1
                           className={`${nasalization.className} text-center text-[22px]/normal font-bold tracking-normal text-[#EDE5D9] md:text-[26px]/normal`}
@@ -117,7 +117,7 @@ export default function Home() {
                     href="#chat"
                     className="
                     relative
-                   mx-auto flex h-[280px] max-h-full w-[280px] max-w-full flex-col items-center justify-center gap-4 rounded-full border-2 border-black bg-white sm:mx-0"
+                   mx-auto flex h-[280px] max-h-full w-[280px] max-w-full flex-col items-center justify-center gap-4 rounded-full border-4 border-black bg-white sm:mx-0"
                   >
                     <h1
                       className={`${rocGrotesk.className} max text-[36px] font-light tracking-tight text-black`}
@@ -133,7 +133,7 @@ export default function Home() {
                   </a>
                 </div>
                 <div className="flex max-w-full flex-col justify-start xl:place-self-start">
-                  <Card className="h-[400px] max-h-full w-[600px] max-w-full content-center items-center rounded-[48px] rounded-r-none border-2 border-black bg-transparent">
+                  <Card className="h-[400px] max-h-full w-[600px] max-w-full content-center items-center rounded-[48px] rounded-r-none border-4 border-black bg-transparent">
                     <CardContent className="relative left-8 mx-auto h-[300px] max-h-full w-[519px] max-w-full p-0">
                       <Image
                         src={"/images/iphone_mockup.png"}
@@ -145,7 +145,7 @@ export default function Home() {
                       />
                     </CardContent>
                   </Card>
-                  <Card className=" h-[180px] max-h-full w-[600px] max-w-full content-center items-center rounded-[48px] rounded-bl-none rounded-tr-none border-2 border-black bg-[#467EBB]">
+                  <Card className="relative bottom-1 z-10 h-[180px] max-h-full w-[600px] max-w-full content-center items-center rounded-[48px] rounded-bl-none rounded-tr-none border-4 border-black bg-[#467EBB]">
                     <CardContent className="mx-auto flex max-w-[486px] flex-row items-center justify-between p-0">
                       <Image
                         width={42}
@@ -174,9 +174,9 @@ export default function Home() {
           <div className="z-10 w-full max-w-full overflow-x-hidden bg-slate-50">
             <section
               id="what"
-              className={`z-10 min-h-screen w-full content-center bg-[#467EBB] text-[#EDE5D9] lg:px-20 ${rocGrotesk.className}`}
+              className={`z-10 min-h-screen w-full content-center bg-[#467EBB] px-2 text-[#EDE5D9] md:px-8 lg:px-20 xl:px-0 ${rocGrotesk.className}`}
             >
-              <div className="flex min-h-[570px] flex-col justify-between gap-4">
+              <div className="mx-auto flex min-h-[570px] max-w-[1348px] flex-col justify-between gap-4">
                 <h1 className="max-w-[720px] text-[36px]/normal font-bold tracking-tight md:text-[56px]/normal ">
                   Quick feedback is the pathway to success
                 </h1>
@@ -190,12 +190,113 @@ export default function Home() {
 
             <section
               id="how"
-              className="flex min-h-[2000px] items-center justify-center bg-black text-[#EDE5D9]"
+              className="flex min-h-full items-center justify-center bg-black px-2 py-48 text-[#EDE5D9] md:px-8 xl:px-0"
             >
-              <div className="text-center">
-                <h1 className={``}>Agencies do too much.</h1>
-                <h1 className={``}>Dev shops do too little.</h1>
-                <h1 className={``}>Ziti&apos;s al dente.</h1>
+              <div className="flex w-full max-w-[1348px] flex-col gap-36 text-center">
+                <div className="flex max-w-full flex-col place-self-start">
+                  <BlockCard>
+                    <h1
+                      className={`${rocGrotesk.className} text-[23px] text-[#EDE5D9] sm:text-[30px] md:text-[40px] `}
+                    >
+                      Agencies do too much.
+                    </h1>
+                  </BlockCard>
+                  <BlockCard className="overflow-hidden rounded-b-none bg-[#E30B17]">
+                    <div className="relative flex items-center gap-4">
+                      <PillWithText
+                        className={` absolute left-80 top-[-38px] z-50 text-[#EDE5D9]`}
+                      >
+                        <p> integrated campaigns</p>
+                      </PillWithText>
+                      <PillWithText
+                        className={` absolute bottom-[-72px] left-[-12px] z-40 whitespace-nowrap text-[#EDE5D9]`}
+                      >
+                        <p>content production</p>
+                      </PillWithText>
+                      <PillWithText
+                        className={` absolute left-40 top-[-72px] z-40 text-[#EDE5D9]`}
+                      >
+                        <p>verbal identity</p>
+                      </PillWithText>
+                      <PillWithText
+                        className={` absolute bottom-[-44px] left-[164px] z-30 text-[#EDE5D9]`}
+                      >
+                        <p>digital experience</p>
+                      </PillWithText>{" "}
+                      <PillWithText
+                        className={` absolute bottom-[-14px] left-[-32px] z-20 text-[#EDE5D9]`}
+                      >
+                        <p>brand architecture</p>
+                      </PillWithText>
+                      <PillWithText
+                        className={` absolute bottom-[-72px] right-[188px] z-20 text-[#EDE5D9]`}
+                      >
+                        <p>go-to-market</p>
+                      </PillWithText>{" "}
+                      <PillWithText
+                        className={` absolute bottom-[-72px] right-[-140px] text-[#EDE5D9]`}
+                      >
+                        <p>research + strategy</p>
+                      </PillWithText>
+                      <PillWithText
+                        className={` absolute bottom-[-6px] right-[-36px] text-[#EDE5D9]`}
+                      >
+                        <p>content production</p>
+                      </PillWithText>
+                    </div>
+                  </BlockCard>
+                </div>
+                <div className="flex max-w-full flex-col place-self-end">
+                  <BlockCard>
+                    <h1
+                      className={`${rocGrotesk.className} text-[23px] text-[#EDE5D9] sm:text-[30px] md:text-[40px] `}
+                    >
+                      Dev shops do too little.
+                    </h1>
+                  </BlockCard>
+                  <BlockCard className="max-w-full overflow-hidden rounded-b-none bg-[#F48019]">
+                    <div className="relative flex max-w-full flex-col gap-4 p-8">
+                      <div className="flex w-full max-w-[75%] flex-row justify-between gap-4 place-self-start">
+                        <PillWithText className="border-[2px] text-[12px]">
+                          <p>scope creep</p>
+                        </PillWithText>
+                        <PillWithText className="border-[2px] text-[12px]">
+                          <p>long timelines</p>
+                        </PillWithText>
+                      </div>
+                      <div className="flex w-full max-w-[75%] flex-row justify-between gap-4 place-self-end">
+                        <PillWithText className="border-[2px] text-[12px]">
+                          <p>high cost</p>
+                        </PillWithText>
+                        <PillWithText className="border-[2px] text-[12px]">
+                          <p>limited adaptability</p>
+                        </PillWithText>
+                      </div>
+                    </div>
+                  </BlockCard>
+                </div>{" "}
+                <div className="flex max-w-full flex-col place-self-start">
+                  <BlockCard>
+                    <h1
+                      className={`${rocGrotesk.className} text-[23px] text-[#EDE5D9] sm:text-[30px] md:text-[40px] `}
+                    >
+                      Ziti&apos;s al dente.
+                    </h1>
+                  </BlockCard>
+                  <BlockCard className="overflow-hidden rounded-b-none bg-[#467EBB]">
+                    <div className="relative flex flex-row items-center justify-between gap-2 px-6">
+                      <PillWithText className="border-[2px] px-5 text-[13px] font-light md:px-8 md:text-[24px]">
+                        product
+                      </PillWithText>
+                      <PillWithText className="border-[2px] px-5 text-[13px] font-light md:px-8 md:text-[24px]">
+                        design
+                      </PillWithText>
+                      <PillWithText className="border-[2px] px-5 text-[13px] font-light md:px-8 md:text-[24px]">
+                        engineering
+                      </PillWithText>
+                    </div>
+                  </BlockCard>
+                </div>
               </div>
             </section>
 
@@ -209,8 +310,8 @@ export default function Home() {
                 {/* various images placed in a grid with 2 columns. The first column has two rows and the second has 3. use a placeholder image for now  */}
                 <div className="my-40 mt-20 grid grid-cols-2 gap-12">
                   <div className="flex flex-col items-center gap-12">
-                    <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-2 border-black text-center">
-                      <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-2 border-black text-center">
+                    <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-4 border-black text-center">
+                      <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-4 border-black text-center">
                         <div className="relative left-10 m-auto h-[372px] max-h-full w-[480px] max-w-full">
                           {" "}
                           <AspectRatio
@@ -226,8 +327,8 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                    <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-2 border-black text-center">
-                      <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-2 border-black text-center">
+                    <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-4 border-black text-center">
+                      <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-4 border-black text-center">
                         <div className="relative left-10 m-auto h-[372px] max-h-full w-[480px] max-w-full">
                           {" "}
                           <AspectRatio
@@ -245,8 +346,8 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex flex-col items-center gap-12">
-                    <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-2 border-black text-center">
-                      <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-2 border-black text-center">
+                    <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-4 border-black text-center">
+                      <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-4 border-black text-center">
                         <div className="relative left-10 m-auto h-[372px] max-h-full w-[480px] max-w-full">
                           {" "}
                           <AspectRatio
@@ -262,8 +363,8 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                    <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-2 border-black text-center">
-                      <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-2 border-black text-center">
+                    <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-4 border-black text-center">
+                      <div className="relative h-[425px] max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] border-4 border-black text-center">
                         <div className="relative left-10 m-auto h-[372px] max-h-full w-[480px] max-w-full">
                           {" "}
                           <AspectRatio
@@ -355,7 +456,7 @@ export default function Home() {
               </div>
             </section>
 
-            <section className="z-10 w-full bg-black px-12">
+            <section className="z-10 w-full bg-black px-12 ">
               <footer
                 className={`z-10 flex min-h-[180px] w-full items-center justify-between self-center rounded-t-[48px] bg-[#EDE5D9] px-4 ${nasalization.className}`}
               >
@@ -434,6 +535,34 @@ export default function Home() {
 //     </div>
 //   );
 // }
+interface BlockCardProps {
+  className?: string;
+  children: React.ReactNode;
+}
+
+function BlockCard({ className, children }: BlockCardProps) {
+  return (
+    <Card
+      className={`h-[160px] max-h-full w-[720px] max-w-full content-center items-center rounded-[48px] border-4 border-white bg-transparent ${className}`}
+    >
+      <CardContent className="p-0">{children}</CardContent>
+    </Card>
+  );
+}
+interface PillWithTextProps {
+  className?: string;
+  children: React.ReactNode;
+}
+
+function PillWithText({ className, children }: PillWithTextProps) {
+  return (
+    <div
+      className={`h-[53px] content-center items-center whitespace-nowrap rounded-full border-4 border-black bg-[#EDE5D9] px-8 text-center text-[24px] tracking-tighter text-black ${nasalization.className} ${className} w-fit`}
+    >
+      {children}
+    </div>
+  );
+}
 
 function Marquee({}) {
   return (
