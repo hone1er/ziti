@@ -468,22 +468,46 @@ function WorkSection() {
   const [currentImageName, setCurrentImageName] = useState("drippi");
 
   const [allImagePaths, setAllImagePaths] = useState<{
-    [key: string]: { paths: string[]; currentIndex: number };
+    [key: string]: {
+      paths: string[];
+      currentIndex: number;
+      isHovered: boolean;
+    };
   }>({
     drippi: {
-      paths: ["/images/iphone_mockup.png", "/images/drippiLaptop.png"],
+      paths: [
+        "/images/iphone_mockup.png",
+        "/images/drippiLaptop.png",
+        "/images/drippiLogo.png",
+      ],
+      isHovered: false,
       currentIndex: 0,
     },
     scaler: {
-      paths: ["/images/scalerLaptop1.png", "/images/scalerLaptop2.png"],
+      paths: [
+        "/images/scalerLaptop1.png",
+        "/images/scalerLaptop2.png",
+        "/images/scalerLogo.png",
+      ],
+      isHovered: false,
       currentIndex: 0,
     },
     roar: {
-      paths: ["/images/roarLaptop.png", "/images/roarMobile1.png"],
+      paths: [
+        "/images/roarLaptop.png",
+        "/images/roarMobile1.png",
+        "/images/roarLogo.png",
+      ],
+      isHovered: false,
       currentIndex: 0,
     },
     twali: {
-      paths: ["/images/twaliLaptop.png", "/images/twaliLaptop2.png"],
+      paths: [
+        "/images/twaliLaptop.png",
+        "/images/twaliLaptop2.png",
+        "/images/twaliLogo.png",
+      ],
+      isHovered: false,
       currentIndex: 0,
     },
   });
@@ -493,8 +517,7 @@ function WorkSection() {
     const interval = setInterval(() => {
       // Determine the next index for the current image set
       const currentImageSet = allImagePaths[currentImageName];
-      const nextIndex =
-        (currentImageSet!.currentIndex + 1) % currentImageSet!.paths.length;
+      const nextIndex = currentImageSet?.currentIndex === 0 ? 1 : 0;
 
       // Update the current image set with the next index
       allImagePaths[currentImageName] = {
@@ -510,6 +533,35 @@ function WorkSection() {
     return () => clearInterval(interval);
   }, [currentImageName, allImagePaths]);
 
+  const handleMouseEnter = (imageName: string) => {
+    console.log("🚀 ~ handleMouseEnter ~ imageName:", imageName);
+    const currentImageSet = allImagePaths[imageName];
+
+    allImagePaths[imageName] = {
+      ...currentImageSet!,
+      currentIndex: 2,
+    };
+    setAllImagePaths({ ...allImagePaths });
+  };
+
+  const handleMouseLeave = (imageName: string) => {
+    const currentImageSet = allImagePaths[imageName];
+
+    allImagePaths[imageName] = {
+      ...currentImageSet!,
+      currentIndex: 1,
+    };
+    setAllImagePaths({ ...allImagePaths });
+  };
+  const getImageSource = (imageName: string) => {
+    return allImagePaths[imageName]?.paths[
+      allImagePaths[imageName]!.currentIndex
+    ];
+  };
+
+  const getLogoSource = (imageName: string) => {
+    return `/images/${imageName}Logo.png`;
+  };
   return (
     <section
       id="work"
@@ -518,81 +570,87 @@ function WorkSection() {
       <Marquee />
 
       <div className="flex flex-col items-center gap-4 px-2 sm:px-4">
-        <div className="my-40 mt-20 grid grid-cols-2 gap-2 md:gap-4">
-          <div className="flex flex-col items-center gap-2">
-            <div className="relative h-auto max-h-full w-[600px] max-w-full content-center rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
+        <div className="my-40 mt-20 grid grid-cols-2 gap-2 md:gap-8">
+          <div className="flex flex-col items-center gap-2 md:gap-8">
+            <div
+              onMouseEnter={() => handleMouseEnter("drippi")}
+              onMouseLeave={() => handleMouseLeave("drippi")}
+              className="relative h-auto max-h-full w-[600px] max-w-full content-center rounded-[48px] rounded-tl-none border-4 border-black p-[6px] text-center hover:bg-black sm:p-2 xl:h-[425px]"
+            >
               {" "}
-              <div className="max-h-full rounded-[48px] rounded-tl-none border-4 border-black p-8 hover:bg-black">
+              <div className="max-h-full p-4 md:p-8">
                 <AspectRatio
                   ratio={2 / 1.25}
                   className="relative h-full max-h-[280px] w-full max-w-[465px] place-self-center"
                 >
                   <Image
-                    src={
-                      allImagePaths.drippi?.paths[
-                        allImagePaths.drippi!.currentIndex
-                      ] ?? "/images/iphone_mockup.png"
-                    }
+                    src={getImageSource("drippi") ?? "/images/drippiLaptop.png"}
                     fill
+                    style={{ objectFit: "contain" }}
                     alt="drippi mockups"
                   />
                 </AspectRatio>
               </div>
             </div>
 
-            <div className="relative h-auto max-h-full w-[600px] max-w-full content-center rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
-              <div className="max-h-full rounded-[48px] rounded-tr-none border-4 border-black p-8 hover:bg-white">
+            <div
+              onMouseEnter={() => handleMouseEnter("roar")}
+              onMouseLeave={() => handleMouseLeave("roar")}
+              className="relative h-auto max-h-full w-[600px] max-w-full content-center rounded-[48px]  rounded-bl-none border-4 border-black p-[6px] text-center hover:bg-white sm:p-2 xl:h-[425px]"
+            >
+              <div className="max-h-full p-4 md:p-8">
                 <AspectRatio
                   ratio={2 / 1.25}
                   className="relative h-full max-h-[280px] w-full max-w-[465px] place-self-center"
                 >
                   <Image
-                    src={
-                      allImagePaths.roar?.paths[
-                        allImagePaths.roar!.currentIndex
-                      ] ?? "/images/roarLaptop.png"
-                    }
+                    src={getImageSource("roar") ?? "/images/roarLaptop.png"}
                     fill
+                    style={{ objectFit: "contain" }}
                     alt="roar mockups"
                   />
                 </AspectRatio>
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center gap-2">
-            <div className="relative h-auto max-h-full w-[600px] max-w-full content-center rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
+          <div className="flex flex-col items-center gap-2 md:gap-8">
+            <div
+              onMouseEnter={() => handleMouseEnter("scaler")}
+              onMouseLeave={() => handleMouseLeave("scaler")}
+              className="relative h-auto max-h-full w-[600px] max-w-full content-center rounded-[48px] rounded-tr-none border-4 border-black p-[6px] text-center hover:bg-white sm:p-2 xl:h-[425px]"
+            >
               {" "}
-              <div className="max-h-full rounded-[48px] rounded-bl-none border-4 border-black p-8 hover:bg-white">
+              <div className="max-h-full p-4 md:p-8">
                 <AspectRatio
                   ratio={2 / 1.25}
                   className="relative h-full max-h-[280px] w-full max-w-[465px] place-self-center"
                 >
                   <Image
                     src={
-                      allImagePaths.scaler?.paths[
-                        allImagePaths.scaler!.currentIndex
-                      ] ?? "/images/scalerLaptop1.png"
+                      getImageSource("scaler") ?? "/images/scalerLaptop1.png"
                     }
                     fill
+                    style={{ objectFit: "contain" }}
                     alt="scaler mockups"
                   />
                 </AspectRatio>
               </div>
             </div>
-            <div className="relative h-auto max-h-full w-[600px] max-w-full content-center rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
+            <div
+              onMouseEnter={() => handleMouseEnter("twali")}
+              onMouseLeave={() => handleMouseLeave("twali")}
+              className="relative h-auto max-h-full  w-[600px] max-w-full content-center rounded-[48px] rounded-br-none border-4 border-black p-[6px] text-center hover:bg-black sm:p-2 xl:h-[425px]"
+            >
               {" "}
-              <div className="max-h-full rounded-[48px] rounded-br-none border-4 border-black p-8 hover:bg-black">
+              <div className="max-h-full p-4 md:p-8 ">
                 <AspectRatio
                   ratio={2 / 1.25}
                   className="relative h-full max-h-[280px] w-full max-w-[465px] place-self-center"
                 >
                   <Image
-                    src={
-                      allImagePaths.twali?.paths[
-                        allImagePaths.twali!.currentIndex
-                      ] ?? "/images/twaliLaptop.png"
-                    }
+                    src={getImageSource("twali") ?? "/images/twaliLaptop.png"}
                     fill
+                    style={{ objectFit: "contain" }}
                     alt="twali mockups"
                   />
                 </AspectRatio>
