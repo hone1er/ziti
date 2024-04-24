@@ -334,7 +334,7 @@ export default function Home() {
                     </div>
 
                     <div className="relative h-auto max-h-full w-[600px] max-w-full content-center rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
-                      <div className="max-h-full rounded-[48px] rounded-tr-none border-4 border-black p-8 hover:bg-black">
+                      <div className="max-h-full rounded-[48px] rounded-tr-none border-4 border-black p-8 hover:bg-white">
                         <AspectRatio
                           ratio={10 / 7.25}
                           className="relative h-full w-full "
@@ -351,7 +351,7 @@ export default function Home() {
                   <div className="flex flex-col items-center gap-2 lg:gap-4">
                     <div className="relative h-auto max-h-full w-[600px] max-w-full content-center rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
                       {" "}
-                      <div className="max-h-full rounded-[48px] rounded-bl-none border-4 border-black p-8 hover:bg-black">
+                      <div className="max-h-full rounded-[48px] rounded-bl-none border-4 border-black p-8 hover:bg-white">
                         <AspectRatio
                           ratio={10 / 7.25}
                           className="relative h-full w-full "
