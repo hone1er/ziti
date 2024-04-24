@@ -529,7 +529,7 @@ function WorkSection() {
                 >
                   <Image
                     src={
-                      allImagePaths["drippi"]!["paths"][
+                      allImagePaths.drippi?.paths[
                         allImagePaths.drippi!.currentIndex
                       ] ?? "/images/iphone_mockup.png"
                     }
@@ -548,7 +548,7 @@ function WorkSection() {
                 >
                   <Image
                     src={
-                      allImagePaths["roar"]!["paths"][
+                      allImagePaths.roar?.paths[
                         allImagePaths.roar!.currentIndex
                       ] ?? "/images/roarLaptop.png"
                     }
@@ -569,7 +569,7 @@ function WorkSection() {
                 >
                   <Image
                     src={
-                      allImagePaths["scaler"]!["paths"][
+                      allImagePaths.scaler?.paths[
                         allImagePaths.scaler!.currentIndex
                       ] ?? "/images/scalerLaptop1.png"
                     }
@@ -588,7 +588,7 @@ function WorkSection() {
                 >
                   <Image
                     src={
-                      allImagePaths["twali"]!["paths"][
+                      allImagePaths.twali?.paths[
                         allImagePaths.twali!.currentIndex
                       ] ?? "/images/twaliLaptop.png"
                     }
