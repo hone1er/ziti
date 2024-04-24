@@ -785,7 +785,7 @@ function NavBar() {
       <div className="flex w-auto items-center gap-4 pr-4 sm:w-full">
         <div className="flex w-20 max-w-[100px] flex-row justify-between sm:w-full md:max-w-[158px] ">
           <div className="relative flex h-[42px] w-[48px] max-w-full sm:w-[95px]">
-            <Image fill src={"/svg/navLogo.svg"} alt="ziti logo" />
+            <Image fill src={"/images/zitiNav.png"} alt="ziti logo" />
           </div>
         </div>
       </div>
