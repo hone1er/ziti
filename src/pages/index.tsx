@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 import localFont from "next/font/local";
 import { AspectRatio } from "~/components/ui/aspect-ratio";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const rocGrotesk = localFont({
   src: "../../public/fonts/rocGrotesk.otf",
@@ -465,6 +465,51 @@ function HowSection() {
 }
 
 function WorkSection() {
+  const [currentImageName, setCurrentImageName] = useState("drippi");
+
+  const [allImagePaths, setAllImagePaths] = useState<{
+    [key: string]: { paths: string[]; currentIndex: number };
+  }>({
+    drippi: {
+      paths: ["/images/iphone_mockup.png", "/images/drippiLaptop.png"],
+      currentIndex: 0,
+    },
+    scaler: {
+      paths: ["/images/scalerLaptop1.png", "/images/scalerLaptop2.png"],
+      currentIndex: 0,
+    },
+    roar: {
+      paths: ["/images/roarLaptop.png", "/images/roarMobile1.png"],
+      currentIndex: 0,
+    },
+    twali: {
+      paths: ["/images/twaliLaptop.png", "/images/twaliLaptop2.png"],
+      currentIndex: 0,
+    },
+  });
+  const allImageNames = Object.keys(allImagePaths);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Determine the next index for the current image set
+      const currentImageSet = allImagePaths[currentImageName];
+      const nextIndex =
+        (currentImageSet!.currentIndex + 1) % currentImageSet!.paths.length;
+
+      // Update the current image set with the next index
+      allImagePaths[currentImageName] = {
+        ...currentImageSet!,
+        currentIndex: nextIndex,
+      };
+      setAllImagePaths({ ...allImagePaths });
+      // update the current image name to the next image set
+      const nextImageIndex = (allImageNames.indexOf(currentImageName) + 1) % 4;
+      setCurrentImageName(allImageNames[nextImageIndex]!);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [currentImageName, allImagePaths]);
+
   return (
     <section
       id="work"
@@ -479,13 +524,17 @@ function WorkSection() {
               {" "}
               <div className="max-h-full rounded-[48px] rounded-tl-none border-4 border-black p-8 hover:bg-black">
                 <AspectRatio
-                  ratio={10 / 7.25}
-                  className="relative h-full w-full "
+                  ratio={2 / 1.25}
+                  className="relative h-full max-h-[280px] w-full max-w-[465px] place-self-center"
                 >
                   <Image
-                    src="/images/twaliLaptop.png"
+                    src={
+                      allImagePaths["drippi"]!["paths"][
+                        allImagePaths.drippi!.currentIndex
+                      ] ?? "/images/iphone_mockup.png"
+                    }
                     fill
-                    alt="twali laptop"
+                    alt="drippi mockups"
                   />
                 </AspectRatio>
               </div>
@@ -494,13 +543,17 @@ function WorkSection() {
             <div className="relative h-auto max-h-full w-[600px] max-w-full content-center rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
               <div className="max-h-full rounded-[48px] rounded-tr-none border-4 border-black p-8 hover:bg-white">
                 <AspectRatio
-                  ratio={10 / 7.25}
-                  className="relative h-full w-full "
+                  ratio={2 / 1.25}
+                  className="relative h-full max-h-[280px] w-full max-w-[465px] place-self-center"
                 >
                   <Image
-                    src="/images/twaliLaptop.png"
+                    src={
+                      allImagePaths["roar"]!["paths"][
+                        allImagePaths.roar!.currentIndex
+                      ] ?? "/images/roarLaptop.png"
+                    }
                     fill
-                    alt="twali laptop"
+                    alt="roar mockups"
                   />
                 </AspectRatio>
               </div>
@@ -511,13 +564,17 @@ function WorkSection() {
               {" "}
               <div className="max-h-full rounded-[48px] rounded-bl-none border-4 border-black p-8 hover:bg-white">
                 <AspectRatio
-                  ratio={10 / 7.25}
-                  className="relative h-full w-full "
+                  ratio={2 / 1.25}
+                  className="relative h-full max-h-[280px] w-full max-w-[465px] place-self-center"
                 >
                   <Image
-                    src="/images/twaliLaptop.png"
+                    src={
+                      allImagePaths["scaler"]!["paths"][
+                        allImagePaths.scaler!.currentIndex
+                      ] ?? "/images/scalerLaptop1.png"
+                    }
                     fill
-                    alt="twali laptop"
+                    alt="scaler mockups"
                   />
                 </AspectRatio>
               </div>
@@ -526,13 +583,17 @@ function WorkSection() {
               {" "}
               <div className="max-h-full rounded-[48px] rounded-br-none border-4 border-black p-8 hover:bg-black">
                 <AspectRatio
-                  ratio={10 / 7.25}
-                  className="relative h-full w-full "
+                  ratio={2 / 1.25}
+                  className="relative h-full max-h-[280px] w-full max-w-[465px] place-self-center"
                 >
                   <Image
-                    src="/images/twaliLaptop.png"
+                    src={
+                      allImagePaths["twali"]!["paths"][
+                        allImagePaths.twali!.currentIndex
+                      ] ?? "/images/twaliLaptop.png"
+                    }
                     fill
-                    alt="twali laptop"
+                    alt="twali mockups"
                   />
                 </AspectRatio>
               </div>
