@@ -524,24 +524,23 @@ function WorkSection() {
 
       // Update the current image set with the next index
       allImagePaths[currentImageName as ImageKeys] = {
-        ...currentImageSet!,
+        ...currentImageSet,
         currentIndex: nextIndex,
       };
       setAllImagePaths({ ...allImagePaths });
       // update the current image name to the next image set
       const nextImageIndex = (allImageNames.indexOf(currentImageName) + 1) % 4;
-      setCurrentImageName(allImageNames[nextImageIndex]!);
+      setCurrentImageName(allImageNames[nextImageIndex] as ImageKeys);
     }, 2000);
 
     return () => clearInterval(interval);
   }, [currentImageName, allImagePaths]);
 
   const handleMouseEnter = (imageName: ImageKeys) => {
-    console.log("🚀 ~ handleMouseEnter ~ imageName:", imageName);
     const currentImageSet = allImagePaths[imageName];
 
     allImagePaths[imageName] = {
-      ...currentImageSet!,
+      ...currentImageSet,
       currentIndex: 2,
     };
     setAllImagePaths({ ...allImagePaths });
@@ -551,14 +550,14 @@ function WorkSection() {
     const currentImageSet = allImagePaths[imageName];
 
     allImagePaths[imageName] = {
-      ...currentImageSet!,
+      ...currentImageSet,
       currentIndex: 1,
     };
     setAllImagePaths({ ...allImagePaths });
   };
   const getImageSource = (imageName: ImageKeys) => {
     return allImagePaths[imageName]?.paths[
-      allImagePaths[imageName]!.currentIndex
+      allImagePaths[imageName].currentIndex
     ];
   };
 
