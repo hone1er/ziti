@@ -61,7 +61,7 @@ export default function Home() {
 
             <StepSection />
 
-            <section className="z-10 w-full bg-black px-12 ">
+            <section className="z-10 w-full bg-black px-2 sm:px-12 ">
               <Footer />
             </section>
           </div>
@@ -301,7 +301,7 @@ function HeroSection() {
               </CardContent>
             </Card>
             <Card className="relative bottom-1 z-10 h-[180px] max-h-full w-[600px] max-w-full content-center items-center rounded-[48px] rounded-bl-none rounded-tr-none border-4 border-black bg-[#467EBB]">
-              <CardContent className="mx-auto flex max-w-[486px] flex-row items-center justify-between p-0">
+              <CardContent className="mx-auto flex max-w-[486px] flex-row items-center justify-between p-0 px-2">
                 <Image
                   width={42}
                   height={42}
@@ -309,7 +309,7 @@ function HeroSection() {
                   alt="help"
                 />
                 <h1
-                  className={`${rocGrotesk.className} text-center text-[20px]/normal font-bold tracking-normal text-[#EDE5D9] md:text-[24px]/normal`}
+                  className={`${rocGrotesk.className} text-center text-[18px]/normal font-bold tracking-normal text-[#EDE5D9] sm:text-[20px]/normal md:text-[24px]/normal`}
                 >
                   TO MVP AND BEYOND
                 </h1>
@@ -670,7 +670,7 @@ function StepSection() {
   return (
     <section
       id="chat"
-      className={`z-10 flex min-h-screen w-full flex-col justify-center gap-20 bg-black py-20 lg:px-40 ${nasalization.className}`}
+      className={`z-10 flex min-h-screen w-full flex-col justify-center gap-20 bg-black px-2 py-20 lg:px-40 ${nasalization.className}`}
     >
       <div className="0 w-full">
         <Card className="mx-auto w-full max-w-[480px] rounded-[48px] rounded-bl-none rounded-tr-none border-4 border-[#467EBB] bg-transparent">
@@ -810,13 +810,13 @@ function NavBar() {
           href="#work"
           className="text-[16px] tracking-tight text-black md:text-[20px] lg:text-[28px]"
         >
-          Our Work
+          Work
         </a>
         <a
           href="#chat"
           className="text-[16px] tracking-tight text-black md:text-[20px] lg:text-[28px]"
         >
-          Let&apos;s chat
+          Chat
         </a>
       </div>
     </nav>
