@@ -258,7 +258,7 @@ function HeroSection() {
               <Card className="relative bottom-1 z-10 h-[200px] max-h-full w-[600px] max-w-full content-center items-center rounded-[48px] rounded-b-none border-4 border-black bg-[#805533]">
                 <CardContent className="p-0">
                   <h1
-                    className={`${nasalization.className} text-center text-[22px]/normal font-bold tracking-normal text-[#EDE5D9] md:text-[26px]/normal`}
+                    className={`${nasalization.className} mx-auto max-w-[520px] px-4 text-center text-[22px]/normal font-bold tracking-normal text-[#EDE5D9] md:text-[26px]/normal`}
                   >
                     Want to make your idea real but no idea where to start?
                   </h1>
