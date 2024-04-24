@@ -779,9 +779,12 @@ function Footer() {
           134 N 4th Street
           <br /> Brooklyn, New York 11211
         </p>
-        <p className="text-[14px] font-bold tracking-tight lg:text-[24px] ">
+        <a
+          href="mailto:hello@ziti.studio"
+          className="text-[14px] font-bold tracking-tight lg:text-[24px] "
+        >
           Wanna chat? hello@ziti.studio
-        </p>
+        </a>
       </div>
     </footer>
   );
