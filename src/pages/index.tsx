@@ -534,7 +534,7 @@ function WorkSection() {
     }, 2000);
 
     return () => clearInterval(interval);
-  }, [currentImageName, allImagePaths]);
+  }, [currentImageName, allImagePaths, allImageNames]);
 
   const handleMouseEnter = (imageName: ImageKeys) => {
     const currentImageSet = allImagePaths[imageName];
