@@ -724,7 +724,7 @@ function StepSection() {
       </div>
       <div className="w-full">
         <Card className="mx-auto h-full min-h-[200px] w-full max-w-[480px] content-center rounded-[48px] border-4 border-[#EDE5D9] bg-transparent">
-          <CardContent>
+          <CardContent className="py-0">
             <p className=" text-[20px] font-normal text-[#EDE5D9]">
               To MVP and beyond. We&apos;re still here post-MVP if you&apos;d
               like to work in a long-term capacity.
