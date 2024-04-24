@@ -561,9 +561,6 @@ function WorkSection() {
     ];
   };
 
-  const getLogoSource = (imageName: string) => {
-    return `/images/${imageName}Logo.png`;
-  };
   return (
     <section
       id="work"
