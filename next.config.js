@@ -7,7 +7,15 @@ await import("./src/env.js");
 /** @type {import("next").NextConfig} */
 const config = {
   reactStrictMode: true,
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: ["@svgr/webpack"],
+    });
 
+    return config;
+  },
   /**
    * If you are using `appDir` then you must comment the below `i18n` config out.
    *
@@ -18,6 +26,9 @@ const config = {
     defaultLocale: "en",
   },
   images: {
+    dangerouslyAllowSVG: true,
+    contentDispositionType: "attachment",
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [{ hostname: "placehold.co" }],
   },
 };
