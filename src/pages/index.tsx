@@ -519,7 +519,7 @@ function WorkSection() {
 
       <div className="flex flex-col items-center gap-4 px-2 sm:px-4">
         <div className="my-40 mt-20 grid grid-cols-2 gap-2 md:gap-4">
-          <div className="flex flex-col items-center gap-2 lg:gap-4">
+          <div className="flex flex-col items-center gap-2">
             <div className="relative h-auto max-h-full w-[600px] max-w-full content-center rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
               {" "}
               <div className="max-h-full rounded-[48px] rounded-tl-none border-4 border-black p-8 hover:bg-black">
@@ -559,7 +559,7 @@ function WorkSection() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center gap-2 lg:gap-4">
+          <div className="flex flex-col items-center gap-2">
             <div className="relative h-auto max-h-full w-[600px] max-w-full content-center rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
               {" "}
               <div className="max-h-full rounded-[48px] rounded-bl-none border-4 border-black p-8 hover:bg-white">
