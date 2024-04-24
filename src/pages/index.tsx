@@ -117,10 +117,10 @@ export default function Home() {
                     className="
                     relative
                     mx-auto
-                   flex h-[280px] max-h-full w-[280px] max-w-full flex-col items-center justify-center gap-4 place-self-center rounded-full border-4 border-black bg-white sm:mx-0"
+                   flex h-[280px] max-h-full w-[280px] max-w-full flex-col items-center justify-center gap-4 place-self-center rounded-full border-4 border-black bg-white text-black hover:bg-black hover:text-[#EDE5D9] sm:mx-0"
                   >
                     <h1
-                      className={`${rocGrotesk.className} max text-[36px] font-light tracking-tight text-black`}
+                      className={`${rocGrotesk.className} max text-[36px] font-light tracking-tight `}
                     >
                       Let&apos;s chat
                     </h1>
@@ -133,16 +133,23 @@ export default function Home() {
                   </a>
                 </div>
                 <div className="flex max-w-full flex-col justify-start xl:place-self-start">
-                  <Card className="h-[400px] max-h-full w-[600px] max-w-full content-center items-center rounded-[48px] rounded-r-none border-4 border-black bg-transparent">
-                    <CardContent className="relative left-8 mx-auto h-[300px] max-h-full w-[519px] max-w-full p-0">
-                      <Image
-                        src={"/images/iphone_mockup.png"}
-                        alt="iphone mockup"
-                        sizes={
-                          "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        }
-                        fill
-                      />
+                  <Card className="h-[300px] max-h-full w-[600px] max-w-full content-center items-center rounded-[48px] rounded-r-none border-4 border-black bg-transparent sm:h-[360px] md:h-[400px]">
+                    <CardContent className="relative left-8 mx-auto h-[300px] max-h-full w-[519px] max-w-full content-center p-0">
+                      <AspectRatio ratio={2 / 1.2} className="top-0 ">
+                        {" "}
+                        <Image
+                          src={"/images/iphone_mockup.png"}
+                          alt="iphone mockup"
+                          sizes={
+                            "(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          }
+                          fill
+                          style={{
+                            position: "absolute",
+                            bottom: "50px",
+                          }}
+                        />
+                      </AspectRatio>
                     </CardContent>
                   </Card>
                   <Card className="relative bottom-1 z-10 h-[180px] max-h-full w-[600px] max-w-full content-center items-center rounded-[48px] rounded-bl-none rounded-tr-none border-4 border-black bg-[#467EBB]">
@@ -303,16 +310,16 @@ export default function Home() {
 
             <section
               id="work"
-              className="px-none z-10 flex min-h-screen w-full flex-col justify-between bg-[#EDE5D9] py-10 pb-2 md:py-20"
+              className="px-none min-h-600px z-10 flex w-full flex-col justify-between bg-[#EDE5D9] py-10 pb-2 md:min-h-screen md:py-20"
             >
               <Marquee />
 
               <div className="flex flex-col items-center gap-4 px-2 sm:px-4">
                 <div className="my-40 mt-20 grid grid-cols-2 gap-2 md:gap-4">
-                  <div className="flex flex-col items-center gap-2 md:gap-4">
-                    <div className="relative h-auto max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
+                  <div className="flex flex-col items-center gap-2 lg:gap-4">
+                    <div className="relative h-auto max-h-full w-[600px] max-w-full content-center rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
                       {" "}
-                      <div className="rounded-[48px] rounded-tl-none border-4 border-black p-8">
+                      <div className="max-h-full rounded-[48px] rounded-tl-none border-4 border-black p-8 hover:bg-black">
                         <AspectRatio
                           ratio={10 / 7.25}
                           className="relative h-full w-full "
@@ -326,8 +333,8 @@ export default function Home() {
                       </div>
                     </div>
 
-                    <div className="relative h-auto max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
-                      <div className="rounded-[48px] rounded-tr-none border-4 border-black p-8">
+                    <div className="relative h-auto max-h-full w-[600px] max-w-full content-center rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
+                      <div className="max-h-full rounded-[48px] rounded-tr-none border-4 border-black p-8 hover:bg-black">
                         <AspectRatio
                           ratio={10 / 7.25}
                           className="relative h-full w-full "
@@ -341,10 +348,10 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="flex flex-col items-center gap-2 md:gap-4">
-                    <div className="relative h-auto max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
+                  <div className="flex flex-col items-center gap-2 lg:gap-4">
+                    <div className="relative h-auto max-h-full w-[600px] max-w-full content-center rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
                       {" "}
-                      <div className="rounded-[48px] rounded-bl-none border-4 border-black p-8">
+                      <div className="max-h-full rounded-[48px] rounded-bl-none border-4 border-black p-8 hover:bg-black">
                         <AspectRatio
                           ratio={10 / 7.25}
                           className="relative h-full w-full "
@@ -357,9 +364,9 @@ export default function Home() {
                         </AspectRatio>
                       </div>
                     </div>
-                    <div className="relative h-auto max-h-full w-[600px] max-w-full content-center overflow-hidden rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
+                    <div className="relative h-auto max-h-full w-[600px] max-w-full content-center rounded-[24px] p-[6px] text-center sm:p-2 xl:h-[425px]">
                       {" "}
-                      <div className="rounded-[48px] rounded-br-none border-4 border-black p-8">
+                      <div className="max-h-full rounded-[48px] rounded-br-none border-4 border-black p-8 hover:bg-black">
                         <AspectRatio
                           ratio={10 / 7.25}
                           className="relative h-full w-full "
