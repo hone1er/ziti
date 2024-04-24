@@ -45,7 +45,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-[1400px] flex-col items-center justify-center bg-[#EDE5D9]">
-        <div className="flex w-full flex-col items-center justify-center gap-12 px-0 pt-16 ">
+        <div className="flex w-full flex-col items-center justify-center gap-12 px-0 pt-0 md:pt-2 ">
           <div className="align-center relative z-20 flex w-full justify-center">
             <NavBar />
           </div>
@@ -241,9 +241,9 @@ function Marquee() {
 
 function HeroSection() {
   return (
-    <section className="my-auto mt-8 min-h-[85vh] w-full max-w-[1348px] overflow-x-hidden bg-[#EDE5D9] px-2 sm:top-[140px] md:px-8 xl:sticky xl:px-0">
-      <div className="flex flex-col items-center gap-4">
-        <div className="flex w-full flex-col-reverse items-center justify-between gap-8 xl:flex-row">
+    <section className="sticky my-auto mt-0 min-h-[45vh] w-full max-w-full overflow-x-hidden bg-[#EDE5D9] px-2  sm:top-[140px]">
+      <div className="relative top-8 flex h-[52vh] max-h-full w-[100vw] max-w-full flex-col items-center gap-4 md:top-0 md:h-[100vh]">
+        {/* <div className="flex w-full flex-col-reverse items-center justify-between gap-8 xl:flex-row">
           <div className="flex max-w-full flex-col justify-center gap-8 xl:min-h-[70vh]">
             <div className="relative min-h-full rounded-full">
               <Card className="relative z-10 h-[180px] max-h-full w-[600px] max-w-full content-center items-center rounded-[48px] border-4 border-black bg-[#F48019]">
@@ -322,7 +322,8 @@ function HeroSection() {
               </CardContent>
             </Card>
           </div>
-        </div>
+        </div> */}
+        <Image src="/svg/zitiHeroLogo.svg" alt="hero" fill />
       </div>
     </section>
   );
