@@ -467,13 +467,16 @@ function HowSection() {
 function WorkSection() {
   const [currentImageName, setCurrentImageName] = useState("drippi");
 
-  const [allImagePaths, setAllImagePaths] = useState<{
-    [key: string]: {
-      paths: string[];
-      currentIndex: number;
-      isHovered: boolean;
-    };
-  }>({
+  type ImagePaths = {
+    paths: string[];
+    isHovered: boolean;
+    currentIndex: number;
+  };
+
+  type ImageKeys = "drippi" | "scaler" | "roar" | "twali";
+  const [allImagePaths, setAllImagePaths] = useState<
+    Record<ImageKeys, ImagePaths>
+  >({
     drippi: {
       paths: [
         "/images/iphone_mockup.png",
@@ -516,11 +519,11 @@ function WorkSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       // Determine the next index for the current image set
-      const currentImageSet = allImagePaths[currentImageName];
+      const currentImageSet = allImagePaths[currentImageName as ImageKeys];
       const nextIndex = currentImageSet?.currentIndex === 0 ? 1 : 0;
 
       // Update the current image set with the next index
-      allImagePaths[currentImageName] = {
+      allImagePaths[currentImageName as ImageKeys] = {
         ...currentImageSet!,
         currentIndex: nextIndex,
       };
@@ -533,7 +536,7 @@ function WorkSection() {
     return () => clearInterval(interval);
   }, [currentImageName, allImagePaths]);
 
-  const handleMouseEnter = (imageName: string) => {
+  const handleMouseEnter = (imageName: ImageKeys) => {
     console.log("🚀 ~ handleMouseEnter ~ imageName:", imageName);
     const currentImageSet = allImagePaths[imageName];
 
@@ -544,7 +547,7 @@ function WorkSection() {
     setAllImagePaths({ ...allImagePaths });
   };
 
-  const handleMouseLeave = (imageName: string) => {
+  const handleMouseLeave = (imageName: ImageKeys) => {
     const currentImageSet = allImagePaths[imageName];
 
     allImagePaths[imageName] = {
@@ -553,7 +556,7 @@ function WorkSection() {
     };
     setAllImagePaths({ ...allImagePaths });
   };
-  const getImageSource = (imageName: string) => {
+  const getImageSource = (imageName: ImageKeys) => {
     return allImagePaths[imageName]?.paths[
       allImagePaths[imageName]!.currentIndex
     ];
