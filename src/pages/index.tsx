@@ -242,7 +242,7 @@ function Marquee() {
 function HeroSection() {
   return (
     <section className="sticky my-auto mt-0 w-full max-w-full overflow-hidden overflow-x-hidden bg-[#EDE5D9] px-2  sm:top-[140px]">
-      <div className="relative top-8 flex h-[52vh] max-h-full w-[100vw] max-w-full flex-col items-center gap-4 md:top-0 md:h-[100vh]">
+      <div className="relative top-12 flex h-[52vh] max-h-full w-[100vw] max-w-full flex-col items-center gap-4 md:top-0 md:h-[100vh]">
         {/* <div className="flex w-full flex-col-reverse items-center justify-between gap-8 xl:flex-row">
           <div className="flex max-w-full flex-col justify-center gap-8 xl:min-h-[70vh]">
             <div className="relative min-h-full rounded-full">
